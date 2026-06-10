@@ -53,7 +53,7 @@ const App: React.FC = () => {
       title: "INSA SecureVote",
       desc: "A secure, professional, LAN-based election management system built for INSA. Features 3-step guided voting, QR code ID cards, real-time results, and robust security including CSRF and scrypt hashing.",
       tags: ["Python", "Flask", "PostgreSQL", "JavaScript"],
-      github: "https://github.com/Ka3y/election-system",
+      github: "https://github.com/Ka3y/election_system",
       image: "/insa-securevote.jpg"
     },
     {
