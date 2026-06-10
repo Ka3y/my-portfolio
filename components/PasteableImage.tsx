@@ -21,15 +21,17 @@ interface PasteableImageProps {
   placeholderText?: string;
   aspectRatio?: 'square' | 'video' | 'portrait';
   rounded?: 'full' | 'lg' | 'none';
+  defaultImage?: string | null;
 }
 
 export const PasteableImage = ({
   className = "",
   placeholderText = "Click & Ctrl+V to Paste Image",
   aspectRatio = "square",
-  rounded = "lg"
+  rounded = "lg",
+  defaultImage = null
 }: PasteableImageProps) => {
-  const [image, setImage] = useState<string | null>(null);
+  const [image, setImage] = useState<string | null>(defaultImage);
   const [isFocused, setIsFocused] = useState(false);
 
   const handlePaste = useCallback((e: ClipboardEvent) => {

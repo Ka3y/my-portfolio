@@ -50,16 +50,25 @@ const App: React.FC = () => {
 
   const projects = [
     {
+      title: "INSA SecureVote",
+      desc: "A secure, professional, LAN-based election management system built for INSA. Features 3-step guided voting, QR code ID cards, real-time results, and robust security including CSRF and scrypt hashing.",
+      tags: ["Python", "Flask", "PostgreSQL", "JavaScript"],
+      github: "https://github.com/Ka3y/election-system",
+      image: "/insa-securevote.jpg"
+    },
+    {
       title: "Digital Student Management",
       desc: "Full-stack system for academic tracking built with Spring Boot and React. Features complex DB relationships and secure role-based access.",
       tags: ["Spring Boot", "PostgreSQL", "React", "JWT"],
-      github: "https://github.com/Ka3y"
+      github: "https://github.com/Ka3y",
+      image: "/student-management.jpg"
     },
     {
       title: "Daycare Website",
       desc: "A modern, responsive platform focusing on heavy UI/UX optimization for parents. Integrated scheduling and teacher-parent communication modules.",
       tags: ["React", "Tailwind", "Framer Motion"],
-      github: "https://github.com/Ka3y"
+      github: "https://github.com/Ka3y",
+      image: "/daycare-website.jpg"
     }
   ];
 
@@ -148,6 +157,7 @@ const App: React.FC = () => {
                   rounded="full" 
                   className="w-full h-full shadow-2xl border-4 border-white dark:border-slate-800"
                   placeholderText="Paste Profile Pic"
+                  defaultImage="/profile.jpg"
                 />
               </div>
             </motion.div>
@@ -214,6 +224,7 @@ const App: React.FC = () => {
                     aspectRatio="video" 
                     className="mb-6 rounded-2xl" 
                     placeholderText={`Paste ${project.title} Screenshot`}
+                    defaultImage={project.image}
                   />
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map(tag => (
